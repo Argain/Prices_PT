@@ -1,0 +1,19 @@
+/*
+For simplify the process I'm going to assume that the time is in UTC and not paying attention to Timezones
+Also, I have created the fields RATE and CHAIN_PRODUCT 
+*/
+
+DROP TABLE IF EXISTS PRICES;
+
+CREATE TABLE PRICES(
+    BRAND_ID INT NOT NULL,
+    START_DATE DATETIME NOT NULL,
+    END_DATE DATETIME NOT NULL,
+    PRICE_LIST INT NOT NULL,
+    PRODUCT_ID INT NOT NULL,
+    PRIORITY INT NOT NULL,
+    PRICE FLOAT NOT NULL,
+    CURR VARCHAR(3) NOT NULL,
+    RATE FLOAT NOT NULL,
+    CHAIN_PRODUCT VARCHAR(8) NOT NULL
+);
